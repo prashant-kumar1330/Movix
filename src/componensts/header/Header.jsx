@@ -31,7 +31,7 @@ const Header = () => {
 
 
    const handleScroll = ()=>{
-        console.log(window.scrollY);
+       // console.log(window.scrollY);
         if(window.scrollY>200){
           if(lastScrollY < window.scrollY && !mobileMenu ){
             setShow("hide");
