@@ -21,7 +21,7 @@ const TopRated = () => {
           <SwitchTabs data={["Movies","Tv shows"]} onTabChange={onTabChange}/>
           
         </ContentWrapper>
-        <Carousel data = {data?.results} loading={loading}></Carousel>
+        <Carousel data = {data?.results} loading={loading} endpoint={endPoint}></Carousel>
        </div>
       
       
