@@ -54,7 +54,13 @@ const HeroBanner = () => {
                     setQuery(e.target.value);
                    }}
                ></input>
-               <button>
+               <button onClick={
+                ()=>{
+                  if(query.length>0){
+                    navigate(`/search/${query}`);
+                  }
+                }
+               }>
 
                   Search
                 </button>
