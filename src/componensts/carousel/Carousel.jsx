@@ -12,7 +12,7 @@ import Img from "../lazyLoadImage/Img";
 import PosterFallback from "../../assets/no-poster.png";
 
 import "./style.scss";
-const Carousel = ({data,loading,endpoint}) => {
+const Carousel = ({data,loading,endpoint, title}) => {
  const carouselContainer = useRef(); // this hook is to capture any div or element , similar to getElementBYId
   console.log(carouselContainer?.current); // this is how you can print it on console
   console.log(data);
@@ -46,6 +46,7 @@ const navigate = useNavigate();
     
     <div className="carousel">
         <ContentWrapper>
+          {title && <div className="carouselTitle">{title}</div>}
             <BsFillArrowLeftCircleFill className="carouselLeftNav arrow" onClick={()=>{navigation("left")}} />
             <BsFillArrowRightCircleFill className="carouselRighttNav arrow" onClick={()=>{navigation("right")} }/>
             {
